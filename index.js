@@ -14,6 +14,10 @@ app.use(cors());
 // /posts indicates that every route inside postRoutes is going to start with it.
 app.use("/posts", postRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to memories backend");
+});
+
 //process.env.PORT = will be populated by the host
 const PORT = process.env.PORT || "5000";
 
