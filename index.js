@@ -2,10 +2,8 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import postRoutes from "./routes/posts.js";
-import dotenv from "dotenv";
 
 const app = express();
-dotenv.config();
 app.use(express.json({ limit: "30mb", extended: true }));
 
 //the extended: true precises that the req. body object will contain values of any type instead of just strings
