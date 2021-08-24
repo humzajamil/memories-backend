@@ -23,10 +23,13 @@ const PORT = process.env.PORT || "5000";
 
 //useNew and useUni are for avoiding warnings and errors
 mongoose
-  .connect(process.env.CONNECTION_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "CONNECTION_URL = mongodb+srv://humzajameel:Error500@cluster0.kndno.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() =>
     app.listen(PORT, () =>
       console.log(`application connected to database at port ${PORT}`)
